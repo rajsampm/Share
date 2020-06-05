@@ -65,6 +65,7 @@ void preorder(node* temp){
 }
 
 
+
 void postorder(node* temp){
   if(temp == NULL){
     return ;
@@ -72,11 +73,53 @@ void postorder(node* temp){
   else{
     postorder(temp->left);
     postorder(temp->right);
-    
+
     cout<< temp->data <<" ";
   }
 }
 
+
+void levelOrder(node* root){
+  node* var = root;
+  queue<node* > myq;
+
+  myq.push(var);
+
+  while(myq.size() > 0){
+    var = myq.front();
+    cout<< var-> data<<" ";
+    myq.pop();
+
+    if(var -> left != NULL){
+      myq.push(var->left);
+    }
+    if(var-> right != NULL){
+      myq.push(var->right);
+    }
+  }
+
+}
+
+void printGivenLevel(node * root, int level){
+  if(level == 1){
+    cout<<root->data<<" ";
+  }else{
+
+    if(root->left != NULL){
+
+      node* leftChild = root->left;
+
+      printGivenLevel(leftChild, level-1);
+    }
+
+    if(root->right != NULL){
+
+      node* rightChild = root->right;
+
+      printGivenLevel(rightChild, level-1);
+    }
+  }
+}
 int main(){
 
   node* root = new node(5);
@@ -105,8 +148,25 @@ int main(){
   node2->right = node8;
   node7->right = node9;
 
-  cout<<"Preorder travelsal : ";
-  preorder(root);
+  // cout<<"Preorder travelsal : ";
+  // preorder(root);
+  // cout<<endl;
+
+  // cout<<"Level order travelsal : ";
+  // levelOrder(root);
+  // cout<<endl;
+
+  cout<<"Level 1 : ";
+  printGivenLevel(root,1);
+  cout<<endl;
+  cout<<"Level 2 : ";
+  printGivenLevel(root,2);
+  cout<<endl;
+  cout<<"Level 3 : ";
+  printGivenLevel(root,3);
+  cout<<endl;
+  cout<<"Level4  : ";
+  printGivenLevel(root,4);
   cout<<endl;
 
   return 0;
@@ -136,6 +196,7 @@ __________|__________
 
 5  (7  2   10 )  (13)
 
+
                     5
                     |
           __________|__________
@@ -150,6 +211,46 @@ __________|__________
 output : 5  7  2 10
  stack :
 
+5 , 7 , 13,  2, 10 , 9, 8
+
+queue : 5
+
+step 1 :
+we will remove first and add its children to myQueue
+queue : 7 , 13
+print : 5
+
+step 2 :
+we will remove first and add its children to myQueue
+queue : 13, 2 , 10
+print : 5 , 7
+
+step 3 :
+we will remove first and add its children to myQueue
+queue : 2 , 10 , 9 ,8
+print : 5 , 7, 13
+
+step 4 :
+we will remove first and add its children to myQueue
+queue :  10 , 9 ,8
+print : 5 , 7, 13, 2
+
+step 5 :
+we will remove first and add its children to myQueue
+queue :   9 ,8
+print : 5 , 7, 13, 2, 10
+
+
+step 6 :
+we will remove first and add its children to myQueue
+queue : 8
+print : 5 , 7, 13, 2, 10 , 9
+
+
+step 7 :
+we will remove first and add its children to myQueue
+queue :
+print : 5 , 7, 13, 2, 10 , 9 , 8
 
                     5
                     |
@@ -187,6 +288,18 @@ output : 5  7  2 10
   5  (    7 (2  17   21)  (10)   )   (13 (9 6) (8))
 
   5   7   2  17  21  10  13   9  6  8
+
+
+printLevl(root , 3)
+
+PrintLevel(node 7 , 2)
+PrintLevel(node 13 , 2)
+
+PrintLevel(node 2 , 1)
+PrintLevel(node 10 , 1)
+PrintLevel(node 9 , 1)
+PrintLevel(node 8 , 1)
+
 
                     5
                     |

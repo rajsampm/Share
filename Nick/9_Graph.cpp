@@ -1,12 +1,10 @@
 //Contact - gauravak007@gmail.com
 //github  - www.github.com/gaurav1620
 
-
-
 #include<bits/stdc++.h>
 
 using namespace std;
-// 
+//
 // 1. Adjecency matrix
 //
 // mat
@@ -55,7 +53,30 @@ using namespace std;
 // adj[y].push_back(x);
 
 int main(){
+  cout<<"enter the number of nodes : ";
+  int n;cin>>n;
 
+  vector<int> adj[n];
 
-    return 0;
+  cout<<"Please enter the number of links : ";
+  int k;
+  cin>>k;
+
+  for(int i = 0 ; i < k;i++){
+    int a, b;
+    cin>>a>>b;
+    adj[a].push_back(b);
+    adj[b].push_back(a);
+  }
+
+  /*
+  0 - 1 2 3
+  1 - 0 4 5
+  2 - 0 4
+  3 - 0 5
+  4 - 1 2
+  5 - 1 3
+
+  */
+  return 0;
 }
