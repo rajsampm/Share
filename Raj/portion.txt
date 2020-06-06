@@ -1,0 +1,103 @@
+
+Timings : 
+8am    IST  (7:30 pm PST)
+7:30pm IST  (7:00 am PST)
+
+Topics :
+
+    1.Python :
+             Loops (for , while ,do while)
+             Control statements (break , continue, pass)
+             Range funtion of python
+             Iteration techniques
+             Functions
+
+             Dictionary (more focus on this topic)
+             Strings
+             Lists
+             Queue
+             Stack
+             Tuples
+             Sets
+             
+             formatted string literals
+             .format() function
+             List comprehension
+             .lower() and .upper() functions
+             '[start : stop : steps]' on lists
+             lamda funtions
+
+             Class
+             Objects
+             Constructor
+             Destructors
+             Inheritance
+             Encapsulation
+             Polymorphism
+
+
+    2. Linked List:
+            Creation
+            Adding at last
+            Adding at front
+            Finding length
+            Finding nth node from front
+            Finding nth node from last
+            Delete nth node
+            Remove Duplicates from a Sorted Linked List
+            Move last element to the front
+            Reverse a Linked List
+
+            Problems to be completed{
+            https://leetcode.com/problems/odd-even-linked-list
+            https://leetcode.com/problems/reverse-linked-list
+            https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii
+            https://leetcode.com/problems/palindrome-linked-list
+            https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer
+            }
+
+    3. Trees:
+            Defining trees
+            Inserting Nodes 
+            Searching data
+            Inorder traversal
+            Preorder traversal
+            Postorder traversal
+            Print any Level
+            Find Depth
+            Least Common Ancestor
+            
+            Problems to be completed{
+            https://leetcode.com/problems/binary-tree-inorder-traversal
+            https://leetcode.com/problems/binary-tree-level-order-traversal-ii
+            https://leetcode.com/problems/validate-binary-search-tree
+            https://leetcode.com/problems/balanced-binary-tree
+            https://leetcode.com/problems/binary-tree-level-order-traversal
+            https://leetcode.com/problems/minimum-depth-of-binary-tree
+            }
+
+    4. Graph:
+            Creation
+            Depth First Traversal
+            Breadth First Traversal
+            Shortest Distance
+            Problems to be completed{
+                # I will add these afterwards
+            }
+            
+    5. String Algorithms:
+            Searching 
+            Matching
+            Palindromes
+            Find occurences of Capital Alphabets
+            Find special Characters in a string
+
+            Problems to be completed{
+                # I will add these afterwards
+            }
+                
+    6. Basic data strucutes :
+            Stack
+            Queue
+            Hash Table
+
