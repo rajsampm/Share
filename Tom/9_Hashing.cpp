@@ -28,29 +28,9 @@ o(n^2)
 o(2^n)
 
 
-
-array of size n : n/2
-
-n   +  n-1  + n-2  +  n-3  .. (n) ..  2  1
-
-n * (n+1)/2
-n*n
-
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10  = 55
-
-
-(10 * (11))/2 = (110)/2 = 55
-
-*/
-
 /*
-eg : 6 % 7 = 6
-eg : 9 % 7 = 2
-eg : 2 % 7 = 2
-eg : 10 % 7 = 3
-eg : 5 % 7 = 5
-eg : 13 % 7 = 5
-eg : 12 % 7 = 4
+
+  array :   9  ,10 ,2 ,12, 13, 3, 6
 
 0
 1
@@ -98,12 +78,6 @@ hashtable :          q * 3
 */
 int main(){
 
-    // cout<<" 7%3  "<< 7 % 3<<endl;
-    // cout<<" 13%7  "<< 13 % 7<<endl;
-    // cout<<" 18%4  "<< 18 % 4<<endl;
-    //
-    // cout<<" 16  %  4  "<< 16 % 4<<endl;
-
     int arr[10];
     arr[0] = 6;
     arr[1] = 13;
@@ -115,6 +89,14 @@ int main(){
     arr[7] = 88;
     arr[8] = 610;
     arr[9] = 93;
+    /*
+    0 - 6, 18,
+    1 - 13
+    2
+    3
+    4
+    5
+    */
 
     int selected_number = 6;
     vector<int> hashtable [6] ;
@@ -123,7 +105,7 @@ int main(){
     cout<<"ARRAY : ";
     for(int i = 0 ; i < 10;i++){
         cout<<arr[i]<<" ";
-        int mod = arr[i]%selected_number;
+        int mod = arr[i] % selected_number;
         hashtable[mod].push_back(arr[i]);
     }
     cout<<endl;
